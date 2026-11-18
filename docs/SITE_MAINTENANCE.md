@@ -71,7 +71,8 @@ SSH authenticated as `Hansello218`. The user created the original empty
 `Hansello218.github.io` repository, then chose the project-site name
 `ChaoHe-research`. The GitHub-side rename has now been completed and verified with a successful
 `git ls-remote origin` returning no refs (empty repository). Local `origin`
-targets the new name. No commits, pushes or deployments were performed.
+targets the new name. Source commit `42240c5` has now been pushed to `main` with user authorization.
+Actions deployment and Pages activation are being verified.
 
 1. Open the existing `Hansello218/Hansello218.github.io` repository on GitHub.
    Go to Settings → General → Repository name, enter **ChaoHe-research**, and

@@ -17,7 +17,7 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 
 - 用户改为项目站点：`https://hansello218.github.io/ChaoHe-research/`，`baseurl: /ChaoHe-research`；此前空 baseurl 的用户主页配置已取代。
 - 用户已完成仓库改名；`git ls-remote origin` 成功。用户已明确授权提交、推送与部署，正在执行首次发布。
-- 首次发布进行中；后续记录实际提交与部署结果。
+- 源码已推送 origin/main，提交 `42240c5`；GitHub Actions 与 Pages 上线验证进行中。
 - 用户主页版本的既有验证见历史记录；项目路径验证见本次更新记录。
 
 ## 研究记录
@@ -78,3 +78,11 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 用户明确授权“允许推送部署”。目标为 `Hansello218/ChaoHe-research` 的 main；SSH 远端仍为空，GitHub connector 确认是用户拥有的 public 仓库。
 - 发布前生产构建、Prettier、upgrade audit 与 override audit 通过；部署使用的 action v7 标签已向官方远端核实存在。
 - 准备提交当前站点改动；忽略 `.tools`、`vendor`、`_site`、`node_modules`，不上传本地环境与生成缓存。
+
+### 2026-11-18 | 首次源码推送成功
+
+- 类型：实际操作已验证。
+- 源码提交 `42240c589516c0212529f01e4101f36c32266372` 已通过普通 `git push -u origin main` 成功推送；未 force-push。
+- 初次浅克隆推送失败：远端 index-pack 报缺少预期对象。`git fetch --unshallow upstream main` 补全历史后，`git fsck --connectivity-only` 通过，重试推送成功。
+- GitHub 已识别全部工作流，但首次导入后未出现 runs；本次同步发布记录后继续触发、检查部署。
+- Pages 尚未启用，待 `gh-pages` 生成后选择分支发布源。当前接口无 Pages 设置更新能力，不通过修改权限或提取凭据绕过。
