@@ -40,7 +40,6 @@ jobs:
     # This repo is a template; without the guard every generated site would
     # burn Actions minutes screenshotting its own pages into a README it does
     # not have.
-    if: github.repository == 'alshedivat/al-folio'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v7

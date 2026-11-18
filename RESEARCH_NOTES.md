@@ -86,3 +86,11 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 初次浅克隆推送失败：远端 index-pack 报缺少预期对象。`git fetch --unshallow upstream main` 补全历史后，`git fsck --connectivity-only` 通过，重试推送成功。
 - GitHub 已识别全部工作流，但首次导入后未出现 runs；本次同步发布记录后继续触发、检查部署。
 - Pages 尚未启用，待 `gh-pages` 生成后选择分支发布源。当前接口无 Pages 设置更新能力，不通过修改权限或提取凭据绕过。
+
+### 2026-11-18 | 远端工作流首次运行修复
+
+- 类型：远端日志已验证 / 修复。
+- Deploy run `44279039174` 在 Ruby setup 失败：ubuntu-latest 已切换为 Ubuntu 26.04，旧 Ruby 3.3.5 无对应二进制包。将 deploy 和 upgrade-check 固定为 ubuntu-24.04，保留 Ruby 3.3.5。
+- 部分禁用的模板维护任务原已有 job if，先前添加的 guard 与其重复。合并为单个条件，保持仅上游执行；检查全部 workflow YAML 无重复 mapping key。
+- 首次导入出现 runs 的时间有延迟；此前“未出现 runs”只描述当时查询结果，不能据此判定首次导入未触发。
+- 源码已发布，后续继续观察修复后的 Actions 和 gh-pages。

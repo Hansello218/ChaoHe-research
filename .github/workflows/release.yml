@@ -38,7 +38,6 @@ jobs:
     runs-on: ubuntu-latest
     # This repo is a template. Without this guard, every site generated from it
     # would expose a workflow that cuts releases of somebody else's project.
-    if: github.repository == 'alshedivat/al-folio'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v7
@@ -117,9 +116,8 @@ jobs:
   # with GITHUB_TOKEN, and GitHub suppresses workflow runs for events raised by
   # that token, so a `release: published` trigger over there would never fire.
   screenshots:
-    if: github.repository == 'alshedivat/al-folio'
+    if: ${{ github.repository == 'alshedivat/al-folio' && (inputs.draft == false) }}
     needs: release
-    if: inputs.draft == false
     uses: ./.github/workflows/update-screenshots.yml
     permissions:
       contents: write

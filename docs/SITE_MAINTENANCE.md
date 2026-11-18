@@ -98,7 +98,7 @@ Actions deployment and Pages activation are being verified.
    do not force-push over them.
 
 4. Wait for **Deploy site** in Actions to pass and create `gh-pages`. The workflow
-   runs Jekyll with Ruby 3.3.5, preserves `baseurl: /ChaoHe-research`, purges CSS, and publishes
+   runs Jekyll with Ruby 3.3.5 on Ubuntu 24.04, preserves `baseurl: /ChaoHe-research`, purges CSS, and publishes
    generated `_site` to `gh-pages` without force-push.
 5. Settings → Pages → Source: **Deploy from a branch**; select **gh-pages** and
    **/(root)**, save, and enable HTTPS once available. Do not choose the `main`

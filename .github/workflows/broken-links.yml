@@ -43,7 +43,6 @@ jobs:
     if: github.repository == 'alshedivat/al-folio'
     runs-on: ubuntu-latest
     # only run on the main repo
-    if: github.repository == 'alshedivat/al-folio'
     steps:
       - uses: actions/checkout@v7
 

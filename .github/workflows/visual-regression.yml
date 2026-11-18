@@ -40,7 +40,6 @@ jobs:
     # Upstream-only: compares this repo's build against the v0.16.3 baseline.
     # A site created from the template has its own content, so the diff would
     # be meaningless there.
-    if: github.repository == 'alshedivat/al-folio'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

@@ -29,7 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     # This repo is a template; without this guard every site generated from it
     # would burn Actions minutes charting someone else's repository.
-    if: github.repository == 'alshedivat/al-folio'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v7
