@@ -127,3 +127,9 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 验证：生产构建和部署同样的 PurgeCSS 处理通过；Chromium 在 1440/1024/768/390px 检查首页及 Publications，均无溢出、错误资源或 JS 错误，BibTeX 展开和键盘跳转通过。已目视桌面和手机截图。
 - 配色对比：正文 13.96:1、次级文字 6.32:1、标题 11.40:1、venue 6.82:1、入围 6.43:1。Prettier、upgrade audit 和两个 acknowledged override 审计通过。
 - 保持：三篇论文数据、作者顺序、联系信息、公开地址、项目 baseurl、无照片与无虚构 teaser 的约束。
+
+### 2026-11-18 | 视觉更新正式上线
+
+- 源码 `3dadac05144112f67cb5c43e15477873a25eaef3`，Deploy site run `44282955616` 与正式 Pages run `44283010338` 全部成功。
+- 在线 Chromium 1440px / 390px：确认页面背景 rgb(243,246,250)、白色模块、venue rgb(36,87,129)，桌面双列与手机单列生效，均无横向溢出。在线 Publications HTTP 200，更新后的 section 与三篇论文正确。
+- 已保存本地 QA 截图于忽略的 `.tools/live-design-1440.png` 与 `.tools/live-design-390.png`；未将参考主页截图或第三方素材加入仓库。
