@@ -16,8 +16,8 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 ## 当前状态、阻碍与下一步
 
 - 用户改为项目站点：`https://hansello218.github.io/ChaoHe-research/`，`baseurl: /ChaoHe-research`；此前空 baseurl 的用户主页配置已取代。
-- 用户已完成仓库改名；`git ls-remote origin` 成功。用户已明确授权提交、推送与部署，正在执行首次发布。
-- 源码已推送 origin/main，提交 `42240c5`；GitHub Actions 与 Pages 上线验证进行中。
+- 用户已明确授权发布；源码已推送 `Hansello218/ChaoHe-research` 的 main。
+- 最新部署源码为 `12bab4b`；Deploy site run `44280380472` 成功，生成 gh-pages `f3cc66f`。Pages 当前尚未启用，等待用户设置发布源。
 - 用户主页版本的既有验证见历史记录；项目路径验证见本次更新记录。
 
 ## 研究记录
@@ -101,3 +101,12 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - run `44279238548` 的 Install and Build 持续运行数分钟，格式和升级检查已成功；运行中日志下载尚不可用，未据此宣称特定安装命令失败。
 - 当前无 Notebook 内容，ImageMagick 已关闭；移除部署流程中无用的 setup-python、apt ImageMagick、pip nbconvert，直接使用已在本地验证过的生产 Jekyll 构建命令。
 - 保留原插件系统、Ruby/Node、PurgeCSS 与 gh-pages 发布，不吞异常、不更换构建器。等待精简流程的实际远端结果。
+
+### 2026-11-18 | Actions 构建与 gh-pages 发布成功
+
+- 类型：远端工作流与产物已验证。
+- 最新部署源码 `12bab4b7dc0010ce400159ec022ce8ef5fe6555e`，工作流 https://github.com/Hansello218/ChaoHe-research/actions/runs/44280380472 的全部步骤成功。
+- gh-pages 提交 `f3cc66f13e515d22534a38c80f99fe9a6db80019` 已通过 SSH 拉取并核实：首页与 Publications 均为三篇论文、含 ROBIO 的 Finalist 和已接收未见刊状态，canonical 与全部引用文件路径正确。
+- 先前修复版本的远端 Prettier 和 upgrade checks 成功；模板专属任务按预期 skipped。
+- 公开地址仍返回 404；GitHub API `has_pages: false`。已请求用户在 Settings → Pages 选择 Deploy from a branch → gh-pages → /(root) 并 Save。当前工具不支持修改 Pages 设置。
+- 此条仅为文档更新，使用 skip ci 避免为记录结果重复部署；网站产物仍来自上述已成功的源码。
