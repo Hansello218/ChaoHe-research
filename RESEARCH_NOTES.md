@@ -7,6 +7,7 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 ## 当前已确认结论
 
 - 源码已核实：基于官方 starter `fde4cbf`，核心 gem 固定 `al_folio_core 1.0.15`；运行时由版本化插件提供。
+- 用户明确要求：网页可见文字使用 `"Times New Roman", Times, serif`，BibTeX 保留等宽字体；不下载或提交专有字体文件。
 - 用户明确要求：毕业于 Soochow University；不声明现任机构、学位或工作。无照片、CV、Scholar 账号。
 - 文献报告：Endo-GSG 的作者、DOI、页码和官方 PDF 链接已由 IJCAI 页面核实；Endo-4SRF 的卷期、页码、作者与 DOI 由 PubMed 核实。IEEE 页面有机器人验证限制。
 - 用户明确要求：ROBIO 论文入围 Best Paper Finalist，已接收但未见刊，显示 `ACCEPTED · Not yet published`；完整作者与 DOI 尚未提供；YAML 适配记录不输出作者或伪造 citation。
@@ -133,3 +134,10 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 源码 `3dadac05144112f67cb5c43e15477873a25eaef3`，Deploy site run `44282955616` 与正式 Pages run `44283010338` 全部成功。
 - 在线 Chromium 1440px / 390px：确认页面背景 rgb(243,246,250)、白色模块、venue rgb(36,87,129)，桌面双列与手机单列生效，均无横向溢出。在线 Publications HTTP 200，更新后的 section 与三篇论文正确。
 - 已保存本地 QA 截图于忽略的 `.tools/live-design-1440.png` 与 `.tools/live-design-390.png`；未将参考主页截图或第三方素材加入仓库。
+
+### 2026-11-18 | Times 系列字体
+
+- 类型：用户明确要求 / 本地浏览器已验证。
+- 将站点 body 字体栈改为 `"Times New Roman", Times, serif`；标题、正文、导航、作者与论文资源链接继承该字体，BibTeX 保持 monospace。字体实际渲染由访问设备的可用字体决定，未下载或提交专有字体文件。
+- 生产构建、PurgeCSS 与格式检查通过；1440/1024/768/390px 的首页和 Publications 无横向溢出，既有论文状态、链接、BibTeX 和键盘导航检查通过。浏览器 computed style 核实八类文字均为 Times 字体栈，已目视手机截图。
+- 原模块布局、配色、字号和出版信息不变。按既有发布授权提交并部署。

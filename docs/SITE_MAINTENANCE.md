@@ -30,7 +30,9 @@ warm accent. No shadows, decorative images or animation dependencies were added.
 The visual review compared [Jon Barron](https://jonbarron.info/),
 [Deepak Pathak](https://www.cs.cmu.edu/~dpathak/) and [Keunhong Park](https://keunhong.com/).
 These informed hierarchy and section separation; their content/assets are not reused.
-Site colors and spacing live in `assets/css/academic.scss`. Main text color pairs
+Site colors, spacing and the `"Times New Roman", Times, serif` font stack live in
+`assets/css/academic.scss`. Headings and navigation inherit this font; BibTeX keeps
+its monospace font. No proprietary font files are bundled. Main text color pairs
 have at least 6.3:1 contrast. Both public pages were checked at 1440/1024/768/390px,
 including expanded BibTeX, missing-author behavior, focus navigation and asset loads.
 
