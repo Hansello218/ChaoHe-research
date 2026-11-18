@@ -17,7 +17,7 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 
 - 用户改为项目站点：`https://hansello218.github.io/ChaoHe-research/`，`baseurl: /ChaoHe-research`；此前空 baseurl 的用户主页配置已取代。
 - 用户已明确授权发布；源码已推送 `Hansello218/ChaoHe-research` 的 main。
-- 最新部署源码为 `12bab4b`；Deploy site run `44280380472` 成功，生成 gh-pages `f3cc66f`。Pages 当前尚未启用，等待用户设置发布源。
+- 站点已正式上线：`https://hansello218.github.io/ChaoHe-research/`；首页、Publications 和样式文件 HTTP 200。用户已保存 Pages 发布源，正式 Pages run `44281146540` 成功。
 - 用户主页版本的既有验证见历史记录；项目路径验证见本次更新记录。
 
 ## 研究记录
@@ -110,3 +110,10 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 先前修复版本的远端 Prettier 和 upgrade checks 成功；模板专属任务按预期 skipped。
 - 公开地址仍返回 404；GitHub API `has_pages: false`。已请求用户在 Settings → Pages 选择 Deploy from a branch → gh-pages → /(root) 并 Save。当前工具不支持修改 Pages 设置。
 - 此条仅为文档更新，使用 skip ci 避免为记录结果重复部署；网站产物仍来自上述已成功的源码。
+
+### 2026-11-18 | Pages 正式上线与 404 闭环
+
+- 类型：用户截图 / 远端构建与在线访问已验证。
+- 用户截图确认 Deploy from a branch → gh-pages → /(root) 已保存；随后 Pages build and deployment run `44281146540` 的 build、report-build-status、deploy 全部成功。
+- 在线首页、Publications、academic.css 均返回 HTTP 200；进一步读取两个公开页面，确认三篇论文、ROBIO Finalist 与已接收未见刊状态、canonical，以及全部引用样式文件访问正常。
+- 此前 404 是 Pages 发布源启用前或正式 Pages 部署尚未完成时的观测；已被当前在线成功结果取代，无需再次修改发布设置。

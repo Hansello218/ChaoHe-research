@@ -75,8 +75,9 @@ targets the new name. Source has been pushed to `main` with user authorization. 
 [44280380472](https://github.com/Hansello218/ChaoHe-research/actions/runs/44280380472)
 succeeded for source `12bab4b`, publishing generated files to `gh-pages` (`f3cc66f`).
 The generated branch was checked for correct publication content and asset paths.
-GitHub Pages itself still needs activation in repository settings; the public URL
-returned 404 while `has_pages` was false.
+GitHub Pages was activated by the user with `gh-pages / (root)`. Official Pages
+run [44281146540](https://github.com/Hansello218/ChaoHe-research/actions/runs/44281146540)
+succeeded. The homepage, Publications page and stylesheets now return HTTP 200.
 
 1. Open the existing `Hansello218/Hansello218.github.io` repository on GitHub.
    Go to Settings → General → Repository name, enter **ChaoHe-research**, and
@@ -125,5 +126,5 @@ be verified until the repository is renamed and the source is pushed.
 - Official sources: [IJCAI](https://www.ijcai.org/proceedings/2026/129) and [PubMed](https://pubmed.ncbi.nlm.nih.gov/40030513/). IEEE's document page required a robot check; ROBIO acceptance is user-confirmed, with no public DOI or author list supplied.
 
 Missing: authorized publication teasers, ROBIO complete author list and official
-publication links, an authentic CV PDF (optional). GitHub Actions deployment to `gh-pages` has succeeded. Public hosting is awaiting
-Pages source activation; Safari/Firefox browser behavior has not been tested.
+publication links, an authentic CV PDF (optional). GitHub Actions deployment to `gh-pages` has succeeded. Public hosting has been verified with HTTP 200 responses, correct content and
+stylesheet availability; Safari/Firefox browser behavior has not been tested.
