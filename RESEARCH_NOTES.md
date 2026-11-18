@@ -94,3 +94,10 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 部分禁用的模板维护任务原已有 job if，先前添加的 guard 与其重复。合并为单个条件，保持仅上游执行；检查全部 workflow YAML 无重复 mapping key。
 - 首次导入出现 runs 的时间有延迟；此前“未出现 runs”只描述当时查询结果，不能据此判定首次导入未触发。
 - 源码已发布，后续继续观察修复后的 Actions 和 gh-pages。
+
+### 2026-11-18 | 精简首次部署的未使用依赖
+
+- 类型：源码已核实 / 部署步骤调整。
+- run `44279238548` 的 Install and Build 持续运行数分钟，格式和升级检查已成功；运行中日志下载尚不可用，未据此宣称特定安装命令失败。
+- 当前无 Notebook 内容，ImageMagick 已关闭；移除部署流程中无用的 setup-python、apt ImageMagick、pip nbconvert，直接使用已在本地验证过的生产 Jekyll 构建命令。
+- 保留原插件系统、Ruby/Node、PurgeCSS 与 gh-pages 发布，不吞异常、不更换构建器。等待精简流程的实际远端结果。
