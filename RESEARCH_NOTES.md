@@ -117,3 +117,13 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 用户截图确认 Deploy from a branch → gh-pages → /(root) 已保存；随后 Pages build and deployment run `44281146540` 的 build、report-build-status、deploy 全部成功。
 - 在线首页、Publications、academic.css 均返回 HTTP 200；进一步读取两个公开页面，确认三篇论文、ROBIO Finalist 与已接收未见刊状态、canonical，以及全部引用样式文件访问正常。
 - 此前 404 是 Pages 发布源启用前或正式 Pages 部署尚未完成时的观测；已被当前在线成功结果取代，无需再次修改发布设置。
+
+### 2026-11-18 | 研究者主页调研与视觉层次改进
+
+- 类型：用户明确要求 / 公开主页观察 / 本地浏览器已验证。
+- 背景：用户指出原配色不清晰、缺少模块感。参考 Jon Barron（https://jonbarron.info/）、Deepak Pathak（https://www.cs.cmu.edu/~dpathak/）、Keunhong Park（https://keunhong.com/）的实际主页，借鉴论文优先、文字层次、章节分隔与克制的局部底色；未复制他人内容或图片。
+- 调整：浅灰页面背景、白色有细边界的内容区、深蓝标题；桌面研究兴趣和 News 并排，手机单列。论文仍为共享列表，venue 淡蓝、入围暖色、接收未见刊为次级文字，资源链接使用小型描边样式。
+- 根因核查：核心主题给 span 直接设色，原 venue 父元素颜色不能传递；现在针对 venue span 设置颜色。核心 mt-5 important 规则位于 components layer，站点在同层明确控制主区域和页脚顶部间距。
+- 验证：生产构建和部署同样的 PurgeCSS 处理通过；Chromium 在 1440/1024/768/390px 检查首页及 Publications，均无溢出、错误资源或 JS 错误，BibTeX 展开和键盘跳转通过。已目视桌面和手机截图。
+- 配色对比：正文 13.96:1、次级文字 6.32:1、标题 11.40:1、venue 6.82:1、入围 6.43:1。Prettier、upgrade audit 和两个 acknowledged override 审计通过。
+- 保持：三篇论文数据、作者顺序、联系信息、公开地址、项目 baseurl、无照片与无虚构 teaser 的约束。

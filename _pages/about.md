@@ -5,8 +5,8 @@ permalink: /
 ---
 
 <header class="introduction">
-  <p class="research-descriptor">Computer Vision &amp; Computer Graphics</p>
   <h1>Chao He</h1>
+  <p class="research-descriptor">Computer Vision &amp; Computer Graphics</p>
   <div class="biography">
     <p>I graduated from Soochow University. My research interests lie in computer vision and computer graphics, with a particular focus on 3D/4D reconstruction, Gaussian Splatting, physics-based simulation, and surgical robotics.</p>
     <p>I am interested in developing geometry-aware and physics-informed methods for reconstructing, understanding, and simulating dynamic 3D environments.</p>
@@ -17,19 +17,22 @@ permalink: /
   </div>
 </header>
 
-<section class="research-interests" aria-labelledby="interests-heading">
+<div class="research-updates">
+<section class="section-panel research-interests" aria-labelledby="interests-heading">
   <h2 id="interests-heading">Research Interests</h2>
   <ul><li>3D/4D Reconstruction</li><li>Gaussian Splatting</li><li>Physics-based Simulation</li><li>Surgical Robotics</li></ul>
 </section>
 
-<section class="news-section" aria-labelledby="news-heading">
+<section class="section-panel news-section" aria-labelledby="news-heading">
   <h2 id="news-heading">News</h2>
   <ul class="news-list">
     {% for item in site.data.news %}<li><span class="news-year">{{ item.year }}</span><span><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.text }}</a></span></li>{% endfor %}
   </ul>
 </section>
 
-<section aria-labelledby="publications-heading">
+</div>
+
+<section class="section-panel publications-section" aria-labelledby="publications-heading">
   <div class="section-heading"><h2 id="publications-heading">Selected Publications</h2><a href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">→</span></a></div>
   {% include publication-list.liquid %}
 </section>

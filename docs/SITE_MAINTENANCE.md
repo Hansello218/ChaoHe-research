@@ -19,6 +19,21 @@ Template blog posts, projects, news, books, teaching, CV data/assets, portraits,
 example bibliography, extra social profiles and demo navigation pages were removed.
 Their framework plugins and collection declarations remain available.
 
+## Visual structure
+
+The site uses a pale slate page background with white, lightly bordered sections,
+navy headings and readable secondary text. Research interests and News share a row
+on desktop and stack on small screens. Publications remain a single academic list;
+venue labels use pale blue, and the user-confirmed ROBIO finalist label uses a muted
+warm accent. No shadows, decorative images or animation dependencies were added.
+
+The visual review compared [Jon Barron](https://jonbarron.info/),
+[Deepak Pathak](https://www.cs.cmu.edu/~dpathak/) and [Keunhong Park](https://keunhong.com/).
+These informed hierarchy and section separation; their content/assets are not reused.
+Site colors and spacing live in `assets/css/academic.scss`. Main text color pairs
+have at least 6.3:1 contrast. Both public pages were checked at 1440/1024/768/390px,
+including expanded BibTeX, missing-author behavior, focus navigation and asset loads.
+
 ## Add a publication
 
 Add a verified record to `_bibliography/papers.bib`. Use `selected = {true}` to
