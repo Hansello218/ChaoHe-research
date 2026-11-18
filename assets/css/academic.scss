@@ -1,0 +1,392 @@
+---
+---
+
+:root {
+  color-scheme: light;
+  --global-bg-color: #fff;
+  --global-text-color: #20252b;
+  --global-text-color-light: #5f6873;
+  --global-theme-color: #355f8d;
+  --global-hover-color: #26486d;
+  --global-divider-color: #e6e9ed;
+  --global-footer-bg-color: #fff;
+  --global-footer-text-color: #5f6873;
+  --global-footer-link-color: #355f8d;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #20252b;
+  background: #fff;
+}
+a {
+  color: #355f8d;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  color: #26486d;
+  text-decoration: underline;
+}
+:focus-visible {
+  outline: 2px solid #355f8d;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.container {
+  width: 100%;
+  max-width: 1000px !important;
+  padding-inline: 32px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+// Core defines the mt-5 utility as important inside its components layer.
+@layer components {
+  body > .container {
+    margin-top: 0 !important;
+  }
+}
+.academic-header {
+  border-bottom: 1px solid #e6e9ed;
+}
+.academic-nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-name {
+  color: #20252b;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.academic-nav-links {
+  display: flex;
+  gap: 28px;
+}
+.academic-nav-links a {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #5f6873;
+}
+.academic-nav-links a[aria-current] {
+  color: #355f8d;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+.academic-page {
+  padding-top: 54px;
+  padding-bottom: 12px;
+}
+.academic-page:focus {
+  outline: none;
+}
+h1,
+h2,
+h3 {
+  color: #20252b;
+  line-height: 1.4;
+  font-family: inherit;
+  letter-spacing: -0.025em;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 22px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 550;
+  margin: 0 0 18px;
+}
+.introduction {
+  max-width: 850px;
+}
+.research-descriptor {
+  color: #355f8d;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  margin: 0 0 10px;
+}
+.biography p {
+  margin: 0 0 16px;
+}
+.contact-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 18px;
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  min-height: 44px;
+}
+.contact-links svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+section {
+  margin-top: 38px;
+}
+.research-interests ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 0;
+  padding: 0;
+  margin: 0;
+}
+.research-interests li {
+  font-size: 15px;
+  color: #5f6873;
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid #e6e9ed;
+}
+.research-interests li:last-child {
+  border: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news-list li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  margin-bottom: 9px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.news-year {
+  color: #5f6873;
+  font-variant-numeric: tabular-nums;
+}
+.news-list a {
+  color: #20252b;
+}
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.section-heading > a {
+  font-size: 13px;
+  white-space: nowrap;
+}
+.publication-list ol.bibliography {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.publication-list ol.bibliography > li {
+  margin: 0;
+  padding: 0;
+}
+.publication {
+  padding: 25px 0 27px;
+  border-bottom: 1px solid #e6e9ed;
+}
+.publication-list > ol:first-child > li:first-child .publication {
+  border-top: 1px solid #e6e9ed;
+}
+.publication.has-teaser {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 26px;
+}
+.publication-teaser {
+  width: 100%;
+  height: auto;
+  max-height: 190px;
+  object-fit: contain;
+  align-self: start;
+  background: #f8f9fb;
+}
+.publication-content {
+  min-width: 0;
+}
+.publication h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 9px;
+  letter-spacing: -0.012em;
+}
+.publication h3 a {
+  color: #20252b;
+}
+.publication p {
+  margin: 0 0 6px;
+}
+.publication-authors {
+  font-size: 14.5px;
+  color: #5f6873;
+}
+.publication-authors strong {
+  color: #20252b;
+  font-weight: 650;
+}
+.publication-venue {
+  font-size: 14px;
+  color: #355f8d;
+  font-weight: 550;
+}
+.publication-status {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid #e6e9ed;
+  border-radius: 3px;
+  color: #5f6873;
+  font-size: 12px;
+  font-weight: 400;
+}
+.publication-award {
+  color: #355f8d;
+  font-size: 13px;
+  font-weight: 600;
+}
+.publication-citation {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #5f6873;
+}
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 19px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+.publication-links a,
+.publication-links summary {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.publication-bibtex {
+  display: contents;
+}
+.publication-bibtex summary {
+  cursor: pointer;
+  color: #355f8d;
+  text-decoration: underline;
+}
+.publication-bibtex[open] {
+  display: block;
+  width: 100%;
+}
+.publication-bibtex pre {
+  margin: 10px 0 0;
+  padding: 16px;
+  background: #f8f9fb;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.page-heading {
+  margin-bottom: 30px;
+}
+footer.sticky-bottom {
+  border-top: none;
+  background: #fff;
+  color: #5f6873;
+  margin-top: 38px !important;
+  padding: 22px 0 30px;
+  font-size: 12px;
+}
+footer a {
+  color: #355f8d !important;
+}
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 1000;
+  padding: 8px 14px;
+  background: #fff;
+}
+.skip-link:focus {
+  top: 8px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding-inline: 22px;
+  }
+  .academic-nav {
+    min-height: 66px;
+    gap: 16px;
+  }
+  .academic-nav-links {
+    gap: 18px;
+  }
+  .academic-page {
+    padding-top: 34px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .research-descriptor {
+    font-size: 12px;
+  }
+  .research-interests ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .research-interests li {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  section {
+    margin-top: 30px;
+  }
+  .section-heading {
+    align-items: start;
+  }
+  .section-heading > a {
+    padding-top: 5px;
+    font-size: 12px;
+  }
+  .publication.has-teaser {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .publication-teaser {
+    max-width: 300px;
+    max-height: 220px;
+  }
+  .publication h3 {
+    font-size: 17px;
+  }
+  .news-list li {
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+  }
+}

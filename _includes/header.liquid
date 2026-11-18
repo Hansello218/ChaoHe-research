@@ -1,0 +1,22 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="academic-header">
+  <nav class="container academic-nav" aria-label="Main navigation">
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <div class="academic-nav-links">
+      <a
+        href="{{ '/' | relative_url }}"
+        {% if page.permalink == '/' %}
+          aria-current="page"
+        {% endif %}
+        >About</a
+      >
+      <a
+        href="{{ '/publications/' | relative_url }}"
+        {% if page.permalink == '/publications/' %}
+          aria-current="page"
+        {% endif %}
+        >Publications</a
+      >
+    </div>
+  </nav>
+</header>

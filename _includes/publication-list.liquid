@@ -1,0 +1,10 @@
+<div class="publication-list">
+  {% bibliography --query @*[selected=true] %}
+  <ol class="bibliography accepted-papers">
+    {% for paper in site.data.accepted_papers %}
+      {% if paper.selected %}
+        <li>{% include publication.liquid paper=paper %}</li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</div>

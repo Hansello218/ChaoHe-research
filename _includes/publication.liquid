@@ -1,0 +1,85 @@
+{% assign paper = include.paper %}
+<article class="publication{% if paper.preview %} has-teaser{% endif %}" aria-labelledby="{{ paper.key }}-title">
+  {% if paper.preview %}
+    <img
+      class="publication-teaser"
+      src="{{ paper.preview | prepend: '/assets/img/publication_preview/' | relative_url }}"
+      alt="{{ paper.preview_alt | escape }}"
+      width="460"
+      height="360"
+      loading="lazy"
+      decoding="async"
+    >
+  {% endif %}
+  <div class="publication-content">
+    <h3 id="{{ paper.key }}-title">
+      {% if paper.html -%}
+        <a href="{{ paper.html }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+      {%- else -%}
+        {{- paper.title -}}
+      {%- endif %}
+    </h3>
+    {% if paper.author_array.size > 0 %}
+      <p class="publication-authors">
+        {% for author in paper.author_array -%}
+          {%- unless forloop.first %}, {% endunless -%}
+          {%- if site.scholar.first_name contains author.first and site.scholar.last_name contains author.last -%}
+            <strong>
+              {{- author.first }}
+              {{ author.last -}}
+            </strong>
+          {%- else -%}
+            {{- author.first }}
+            {{ author.last -}}
+          {%- endif -%}
+        {%- endfor %}
+      </p>
+    {% endif %}
+    <p class="publication-venue">
+      <span>{{ paper.abbr }}</span>
+    </p>
+    {% if paper.status %}
+      <p class="publication-status">{{ paper.status }}</p>
+    {% endif %}
+    {% if paper.award %}
+      <p class="publication-award">{{ paper.award }}</p>
+    {% endif %}
+    <p class="publication-citation">
+      {% if paper.journal -%}
+        {{- paper.journal }}, {{ paper.volume }}({{ paper.number }}), {{ paper.pages | replace: '--', '–' }}.
+      {%- else -%}
+        {{- paper.booktitle -}}
+        {%- if paper.series %}, {{ paper.series }}{% endif -%}
+        {%- if paper.pages %}, pp. {{ paper.pages | replace: '--', '–' }}{% endif %}.
+      {%- endif %}
+    </p>
+    {% if paper.html or paper.doi or paper.pdf or paper.code or paper.website or paper.video or paper.author_array.size > 0 %}
+      <div class="publication-links" aria-label="Resources for {{ paper.title | escape }}">
+        {% if paper.html -%}
+          <a href="{{ paper.html }}" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+        {% if paper.pdf -%}
+          <a href="{{ paper.pdf }}" target="_blank" rel="noopener noreferrer">PDF <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+        {% if paper.code -%}
+          <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+        {% if paper.website -%}
+          <a href="{{ paper.website }}" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+        {% if paper.video -%}
+          <a href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+        {% if paper.doi -%}
+          <a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+        {% if paper.author_array.size > 0 %}
+          <details class="publication-bibtex">
+            <summary>BibTeX</summary>
+            <pre>{{ paper.bibtex | hideCustomBibtex | escape }}</pre>
+          </details>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</article>

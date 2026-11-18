@@ -1,0 +1,9 @@
+# Incomplete accepted records stay outside BibTeX until authors are confirmed.
+- key: robio2026rcm
+  title: Universal Robot Kinematic Modeling with a Neural Solver for Surgical Manipulation under Reconfigurable RCM Constraints
+  booktitle: 2026 IEEE International Conference on Robotics and Biomimetics
+  abbr: IEEE ROBIO 2026
+  year: 2026
+  status: ACCEPTED · Not yet published
+  award: Best Paper Finalist
+  selected: true

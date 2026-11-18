@@ -89,3 +89,25 @@ All seven `test/integration_*.sh` scripts are gated by `unit-tests.yml`; run the
 - `.agents/skills/al-folio-bootstrap/SKILL.md` — new-site setup workflow.
 - `.agents/skills/al-folio-v1-migration/SKILL.md` — customized-fork migration and override drift auditing.
 - `.codex/skills` and `.claude/skills` are symlinks to `.agents/skills` for agent-specific discovery.
+
+## Chao He's personal site (site-specific scope)
+
+This checkout is Hansello218's **own site**, not the upstream starter. The documented
+personal-site override policy applies. Canonical URL is
+`https://hansello218.github.io/ChaoHe-research/`, with `url: https://hansello218.github.io`
+and `baseurl: /ChaoHe-research`; do not build with `/al-folio` or an empty baseurl.
+
+Read relevant `RESEARCH_NOTES.md` entries before substantial work. Update that file
+after useful validation; change this guidance only when project rules change.
+Only the three publications explicitly authorized by the user may be published.
+Do not search private research directories for content or add unpublished metadata.
+Complete citations live in `_bibliography/papers.bib`; the incomplete ROBIO entry
+lives in `_data/accepted_papers.yml`. Both views use `_includes/publication-list.liquid`.
+Never fabricate author lists, affiliations, degrees, links, or teaser images.
+
+Local tools are isolated in ignored `.tools/ruby`; gems in ignored `vendor/bundle`.
+Use `export PATH="$PWD/.tools/ruby/bin:$PATH"` for this machine. Build with
+`JEKYLL_ENV=production bundle exec jekyll build`; preview with `bundle exec jekyll serve`.
+Do not commit, push, or deploy without user authorization. Deployment workflow builds
+main/master and writes `_site` to `gh-pages`. Keep plugin-owned gem files untouched;
+review and acknowledge site overrides with the upgrade CLI.

@@ -36,6 +36,7 @@ on:
 
 jobs:
   visual-regression:
+    if: github.repository == 'alshedivat/al-folio'
     # Upstream-only: compares this repo's build against the v0.16.3 baseline.
     # A site created from the template has its own content, so the diff would
     # be meaningless there.
