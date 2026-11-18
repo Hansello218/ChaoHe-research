@@ -141,3 +141,4 @@ Chao He 的公开学术主页。Jekyll / al-folio v1 / GitHub Pages；只展示�
 - 将站点 body 字体栈改为 `"Times New Roman", Times, serif`；标题、正文、导航、作者与论文资源链接继承该字体，BibTeX 保持 monospace。字体实际渲染由访问设备的可用字体决定，未下载或提交专有字体文件。
 - 生产构建、PurgeCSS 与格式检查通过；1440/1024/768/390px 的首页和 Publications 无横向溢出，既有论文状态、链接、BibTeX 和键盘导航检查通过。浏览器 computed style 核实八类文字均为 Times 字体栈，已目视手机截图。
 - 原模块布局、配色、字号和出版信息不变。按既有发布授权提交并部署。
+- 上线结果：源码 `7d1efcd`；Deploy site run `44284206242` 和 Pages run `44284263756` 全部成功。线上 Chromium 在 1440px / 390px 核实正文、标题、导航与论文文字的 Times 字体栈及无横向溢出；本地预览已停止。
